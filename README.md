@@ -2,7 +2,7 @@
 
 ## Goal of the Project
 
-The goal of this project is to gather and investigate a dataset of Wikipedia articles about politicians from different countries. The data sources are described below.
+The goal of this project is to gather and investigate a dataset of Wikipedia articles about politicians from different countries. The data sources and results are described below.
 
 ## Source of Data
 
@@ -50,3 +50,41 @@ The goal of this project is to gather and investigate a dataset of Wikipedia art
 | population |The population of the location as of 2018 (in millions)|
 
 The data is stored in [`master_data.csv`](https://github.com/CoderHam/data-512-a2/blob/master/master_data.csv).
+
+## Write-up
+
+What I learned from this exercise:
+
+1. When writing reproducible code, it is important to have exhaustive documentation and simple code that is both easy to read and understand.
+2. The study involved using data from external sources to investigate bias in the data and I found this a useful way to validate results for data science and perform simple tests to check for bias.
+3. While working with datasets such as this, it is less about programming skills and more about the ability of the individual to critically think about the problem and explain certain trends made visible in the data.
+
+### What did I suspect?
+
+Pages on English Wikipedia about politicians of certain countries about depend on the literacy of the country and how many people from that country tend to speak English.
+
+Since we know that countries with large populations such as India and China do not that the proportionately larger number of politicians, instead of looking at the number of articles per country, scaling it by dividing by population would make sense.
+
+### Results - What I Verified/Found and my Theories about it:
+
+As I thought, countries with small populations such as Tuvalu and Nauru were the ones that had the highest number of articles about politicians as a proportion of the country population and the ones lowest were countries like India, Indonesia and China.
+
+Countries that were not native speakers of English ranked lowest in the $\frac{number\ of\ articles}{total\ population}$ - such as India, Indonesia, China, Uzbekistan and Ethiopia.
+
+## Resources used
+
+These experiments were done using `Python 3.7.1` and run in a `Jupyter Notebook`.
+ > Documentation for Python:  [https://docs.python.org/3.7](https://docs.python.org/3.7/)  
+
+> Documentation for Jupyter Notebook:  [https://jupyter-notebook.readthedocs.io/en/latest](https://jupyter-notebook.readthedocs.io/en/latest/)
+
+The following Python packages were used and their documentation can be found at the accompanying links:
+
+1. Pandas - [Documentation](https://pandas.pydata.org/)
+2. Numpy - [Documentation](http://www.numpy.org/)
+3. Requests - [Documentation](http://docs.python-requests.org/en/master/)
+
+## License
+
+This assignment code is released under the  [MIT License](https://github.com/CoderHam/data-512-a2/blob/master/LICENSE).
+The Wikipedia articles are licensed under a variety of CC licenses as shown [here](https://en.wikipedia.org/wiki/Wikipedia:FAQ/Copyright).
